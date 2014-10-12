@@ -18,8 +18,8 @@ grails.project.dependency.resolution = {
         // excludes 'ehcache'
     }
     log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
-    checksums true // Whether to verify checksums on resolve
-    legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
+    checksums false // Whether to verify checksums on resolve
+    legacyResolve true // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
@@ -38,6 +38,7 @@ grails.project.dependency.resolution = {
         mavenRepo "http://repository.jboss.com/maven2/"
 		
 		mavenRepo "http://maven.springframework.org/milestone/"
+		mavenRepo 'http://repo.spring.io/milestone'
     }
 
     dependencies {
